@@ -1,0 +1,57 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+header {
+  margin: 0 10px; 
+}
+
+header > h1 {
+  text-align: center;
+}
+
+.top_bar {
+  background-color: black;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+.top_bar > ul > li {
+  display: inline-block;
+}
+
+.top_bar > ul > li > a {
+  display: block;
+  color:white;
+  padding: 10px;
+}
+
+.top_bar > ul > li:hover > a {
+  background-color: white;
+  color:black;
+}
+
+.float_right {
+  float:right;
+}
+
+main {
+  margin: 0 10px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: #efefef;
+  padding: 10px 0;
+}

@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
   <header>
     <h1 class="logo">My Blog</h1>
@@ -18,17 +19,22 @@
         <li class="float_right"><a href="signin.html">Sign In</a></li>
       </ul> 
     </nav>
+    <hr>
   </header>
   <main>
-    <section class="about_section">
-      <article class="about_img"></article>
-      <article class="about_description">
-        <h1>프론트엔드 개발 과정</h1>
-        <p>
-          프론트엔드 개발 과정을 공부하고 있습니다.<br>저의 기술 스택은 <strong>java, JSP, mysql, Html, Css</strong>입니다. 
-        </p>
-      </article>
-    </section>
+    <div class="flex-container">
+      <div class="loginbox">
+        <p>로그인</p>
+        <input type="text" placeholder="아이디를 입력해주세요.">
+        <input type="password" placeholder="비밀번호를 입력해주세요.">
+        <button>로그인</button>
+      </div>
+      <div class="iconbox">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-google"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
   </main>
   <footer>
     <p>ⓒ 2023 My Blog. All rights reserved.</p>

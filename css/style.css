@@ -1,3 +1,5 @@
+/* 노멀라이징 */
+
 body, ul, li {
   margin: 0;
   padding: 0;
@@ -9,6 +11,45 @@ a {
   color:inherit;
 }
 
+/* 도적질 on */
+.kenburns-top {
+	-webkit-animation: kenburns-top 5s ease-out both;
+	        animation: kenburns-top 5s ease-out both;
+}
+
+ @-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.1) translateY(-15px);
+            transform: scale(1.1) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.1) translateY(-15px);
+            transform: scale(1.1) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+
+/* 커스텀 */
+
+/* html 공통 */
+
 header {
   margin: 0 10px; 
 }
@@ -19,7 +60,6 @@ header > h1 {
 
 .top_bar {
   background-color: black;
-  padding: 5px 0;
   margin: 10px 0;
 }
 
@@ -30,7 +70,7 @@ header > h1 {
 .top_bar > ul > li > a {
   display: block;
   color:white;
-  padding: 10px;
+  padding: 15px;
 }
 
 .top_bar > ul > li:hover > a {
@@ -49,12 +89,27 @@ main {
 footer {
   text-align: center;
   width: 100%;
-  display: block;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   background-color: #efefef;
-  padding: 10px 0;
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  border: 3px solid lightgray;
+}
+
+/* about.html */
 
 .about_img {
   background-image: url('/img/code.png');
@@ -65,3 +120,53 @@ footer {
 .about_description h1 {
   font-size: 2rem;
 } 
+
+/* singin.html */
+
+.flex-container-signin > h2 {
+  align-self: center;
+}
+
+.flex-container-signin > input {
+  margin: 10px 20px;
+  padding: 10px 0;
+}
+
+.flex-container-signin > button {
+  margin: 10px 20px;
+  padding: 10px 0;
+  background-color: black;
+  color: white;
+}
+
+.flex-container-signin > .iconbox {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.flex-container-signin > .iconbox > i {
+  font-size: 1.75rem;
+}
+
+/* signup.html */
+
+.flex-container-signup {
+  width: 600px;
+}
+
+.flex-container-signup > h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.flex-container-signup > p {
+  margin: 10px;
+}
+
+.flex-container-signup > h3 {
+  margin: 10px;
+}
+
+.flex-container-signup > div {
+  margin: 20px 0px 70px 10px;
+}

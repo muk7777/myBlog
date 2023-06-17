@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Signin</title>
 </head>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <body>
   <header>
     <h1 class="">My Blog</h1>
@@ -14,7 +15,7 @@
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/contact.html">Contact</a></li>
         <li class="float_right"><a href="signup.html">Sign Up</a></li>
         <li class="float_right"><a href="signin.html">Sign In</a></li>
       </ul> 
@@ -26,16 +27,49 @@
       <h2>로그인</h2>
       <input type="text" placeholder="아이디를 입력해주세요.">
       <input type="password" placeholder="비밀번호를 입력해주세요.">
-      <button>로그인</button>
+      <button type="button" id="login-btn">로그인</button>
       <div class="iconbox">
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-google"></i>
-        <i class="fa-brands fa-twitter"></i>
+        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.google.co.kr" target="_blank"><i class="fa-brands fa-google"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
       </div>
     </div>
+    <div id="myModal" class="modal">
+      <div class="modal_content">
+        <span class="close">&times;</span>
+        <p>정말 로그인하시겠습니까?</p>
+        <button type="button" id="next">진행</button>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("myModal");
+
+      var btn = document.getElementById("login-btn");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      var next = document.getElementById("next");
+
+      btn.onclick = function () {
+        modal.style.display = "flex";
+      }
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      
+      next.addEventListener('click', function() {
+        alert("아이디 또는 비밀번호를 확인해주세요.")
+        modal.style.display = 'none';
+      })
+    </script>
   </main>
-  <footer>
-    <p>ⓒ 2023 My Blog. All rights reserved.</p>
-  </footer> 
+  <iframe src="/footer.html" width="100%" frameborder="0"></iframe>
 </body>
 </html> 

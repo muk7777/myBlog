@@ -1,4 +1,16 @@
 /* 노멀라이징 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+iframe {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
 
 body, ul, li {
   margin: 0;
@@ -139,13 +151,62 @@ footer {
   color: white;
 }
 
+.flex-container-signin > button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
 .flex-container-signin > .iconbox {
   text-align: center;
   margin: 10px 0;
 }
 
-.flex-container-signin > .iconbox > i {
+.flex-container-signin > .iconbox i {
   font-size: 1.75rem;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.modal_content > span {
+  align-self: end;
+  margin-right: 10px;
+}
+
+.modal_content > button {
+  background-color: black;
+  color: white;
+  width: 90%;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.modal_content > button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 /* signup.html */
